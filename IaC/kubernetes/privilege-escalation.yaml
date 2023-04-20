@@ -1,0 +1,20 @@
+# Allowing process privilege escalations exposes the Pod to attacks that exploit setuid binaries.
+
+#     MITRE, CWE-284 - Improper Access Control
+#     Linux Kernel Archives, no_new_privs - Official docs
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example
+spec:
+  containers:
+    - name: web
+      image: nginx
+      ports:
+        - name: web
+          containerPort: 80
+          protocol: TCP
+      securityContext:
+        allowPrivilegeEscalation: true # Sensitive
