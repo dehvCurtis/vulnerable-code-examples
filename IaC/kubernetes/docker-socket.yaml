@@ -1,0 +1,24 @@
+# Exposing Docker sockets can lead to compromise of the host systems.
+
+
+#     Kubernetes Documentation - Volumes
+#     Docker Documention - Daemon socket option
+#     MITRE, CWE-284 - Improper Access Control
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test
+spec:
+  containers:
+  - image: k8s.gcr.io/test-webserver
+    name: test-container
+    volumeMounts:
+    - mountPath: /var/run/docker.sock
+      name: test-volume
+  volumes:
+  - name: test-volume
+    hostPath:
+      path: /var/run/docker.sock # Sensitive
+      type: Socket
