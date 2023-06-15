@@ -1,8 +1,9 @@
-# Allowing process privilege escalations exposes the Pod to attacks that exploit setuid binaries.
+# 1. Allowing process privilege escalations exposes the Pod to attacks that exploit setuid binaries.
 
 #     MITRE, CWE-284 - Improper Access Control
 #     Linux Kernel Archives, no_new_privs - Official docs
 
+# 2. Containers lack resource limits
 ---
 apiVersion: v1
 kind: Pod
