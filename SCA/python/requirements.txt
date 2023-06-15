@@ -1,0 +1,4 @@
+# `requirements.txt` with old dependencies
+
+requests==2.26.0
+numpy==1.21.2
