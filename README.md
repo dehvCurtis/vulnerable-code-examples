@@ -1,5 +1,4 @@
-# vulnerable-code-examples
-## Description
+
 This repo contains a variety of code samples of vulnerability, dependency and risk.
 
 ## IaC (Infrastructure as Code)
@@ -111,6 +110,8 @@ Repo: https://github.com/dehvCurtis/vulnerable-code-examples/tree/main/SCA
 | Location        | File     | CWE / Exposure    | # of Exposures |
 | ----------       | -----------                  | ------- | - |
 | `SCA/javascript/node` | `pom.xml` | spring-boot-starter | 1 |
+
+
 
 #### Python
 | Location        | File     | CWE / Exposure    | # of Exposures |

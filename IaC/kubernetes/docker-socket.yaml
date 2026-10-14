@@ -1,9 +1,4 @@
-# Exposing Docker sockets can lead to compromise of the host systems.
 
-
-#     Kubernetes Documentation - Volumes
-#     Docker Documention - Daemon socket option
-#     MITRE, CWE-284 - Improper Access Control
 
 ---
 apiVersion: v1
